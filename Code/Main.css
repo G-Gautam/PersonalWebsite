@@ -1,0 +1,89 @@
+/* *{
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+} */
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    background-image: url("../Images/blank-business-composition-373076.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: whitesmoke;
+    
+}
+.homeRow{
+    padding-top:15%;
+}
+
+.homeRow #name{
+    color: white;
+    font-size: 10.5vw;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+
+}
+
+.titleRow #title{
+    color: greenyellow;
+    font-size: 10vw;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+}
+@media only screen and (max-width: 768px){
+    body{
+        background-size: contain;
+    }
+    .homeRow #profile{
+        display: none;
+    }
+    .homeRow #name{
+        text-align: right;
+    }
+    .titleRow #title{
+        text-align: right;
+    }     
+}
+/* Start of section 1 items*/
+/*Heading*/
+
+
+.aboutMeContainer #titleSec1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 6vw;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 5em;   
+}
+
+.iconsContainer .col-sm-4{
+    text-align: center;
+    padding-top: 5%;
+}
+.iconsContainer .col-sm-4 img{
+    max-width: 100%;
+    height: 12.5vw;
+}
+.iconsContainer .col-sm-4 h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+}
+.iconsContainer ul{
+    list-style: none;
+    text-align: center;
+    display: inline;
+}
+@media only screen and (max-width: 768px){
+    .iconsContainer .col-sm-4 h1{
+        text-align: center;
+        font-size: 6vw;
+    }
+}
+
