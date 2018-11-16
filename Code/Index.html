@@ -22,16 +22,6 @@
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#project">Projects</a>
-        <a href="#connect">Connect</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
     <div class=landingPage>
         <div class=homeRow>
             <div class="col-sm-8">
@@ -59,9 +49,9 @@
     <div class=iconsContainer>
         <div class=col-sm-4>
             <img id="pic" src="../Images/Western.png" alt="Western Logo">
-            <h1 id="education">Bachelors in Software Engineering
-                <br> Currently year 3
-                <br><br> Courses Completed: </h1>
+            <h1 id="education"><b>Bachelors in Software Engineering
+                <br> Currently year 3</b></h1>
+                <br><h3>Courses Completed: </h3>
             <ul id="courses">
                 <li>Applied Mathematics</li>
                 <li>Software Design</li>
@@ -76,9 +66,9 @@
         </div>
         <div class=col-sm-4>
             <img id="pic" src="../Images/LearningLogo.png" alt="Eager to Learn">
-            <h1 id="skills">I Love to Learn
-                <br> and Grow!
-                <br><br>My Skill Set:</h1>
+            <h1 id="skills"><b>I Love to Learn
+                <br> and Grow!</b></h1>
+                <br><h3>My Skill Set:</h3>
             </h1>
             <ul id="skill">
                 <li>Java, C++, Python, HTML, CSS, JavaScript</li>
@@ -93,17 +83,43 @@
             </ul>
         </div>
         <div class=col-sm-4>
-            <img id="pic" src="../Images/jobs.png" alt="Opportunities">
-            <h1 id="exp">Employment History:</h1>
-            <h2>Pathways 2 Excellence</h2>
-            <h3>Coding Program Founder and Coordinator, Marketing Intern, Tutor</h3>
-            <p>My second year at UWO was not my finest. I struggled with my academics and failed to 
-                leave my comfort zone which ended up costing me my admission to IVEY. 
-                Furthermore, I was unable to secure an internship of my choice. <br><b>This was a major 
-                setback but I got through it with the help of my friends and family.</b><br> I recognize this as a
-                failure and I use it like a wakeup call everyday. <br>I started my summer working at a local tutoring center
-                teaching kids in highschool (maths, physics, and chemistry)</p>
+            <img id="pic" src="../Images/Hobbies.png" alt="Hobbies">
+            <h1 id="hobbies"><b>Beyond My <br> Academics</b></h1>
+            <br><h3>How I Spend My Free Time:</h3>
+            <ul id="hobbyList">
+                    <li>Competitive badminton - VP at UWO Badminton</li>
+                    <li>Playing chess - rated 1700 </li>
+                    <li>Teaching myself piano</li>
+                    <li>An executive at UWO Heart & Stroke</li>
+                    <li>Participaing in hackathons</li>
+                    <li>Watching anime</li>
+                    <li>Managing a stock portfolio</li>
+                    <li>Reading current events</li>
+                    <li>Working on side projects</li>
+                </ul>
         </div>
     </div>
+    <script src = "https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <div class = container-fluid>
+        <div class = col-xs-6 id = left>
+            <h1>&#60Connect With Me&#62</h1>
+        </div>
+        <div class = col-xs-6 id = particles-js>
+            <div class = sm>
+                <a href = https://www.facebook.com/gautam.gupta.58511 target="_blank"><img src = "../Images/facebook.png"></a>
+                <a href = https://www.instagram.com/gautam7097/ target="_blank"><img src = "../Images/insta.png"></a>
+                <a href = https://www.linkedin.com/in/ggupta24/ target="_blank"><img src = "../Images/linkedin.jpg"></a>
+                <a href = https://github.com/G-Gautam target="_blank"><img src = "../Images/git.png"></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function(){
+            console.log('Loaded');
+        });
+    </script>
 </body>
 </html>
