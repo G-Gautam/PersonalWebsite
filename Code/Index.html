@@ -2,8 +2,7 @@
 <html land=en>
 
 <head>
-    <link rel="stylesheet" href="Main.css">
-    <script src="Main.js"></script>
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -22,7 +21,24 @@
 </head>
 
 <body>
-    <div class=landingPage>
+    <nav class="navbar navbar-inverse" id = nav>
+        <div class = container-fluid>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">                    <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#1">Home</a></li>
+                  <li><a href="#2">About</a></li>
+                  <li><a href="#3">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+   </nav>
+    <div class=landingPage id = 1>
         <div class=homeRow>
             <div class="col-sm-8">
                 <h1 id=name>GAUTAM GUPTA</h1>
@@ -38,13 +54,11 @@
             </div>
         </div>
     </div>
-
-
+<div class = anchor id = 2></div>
     <div class="aboutMeContainer">
         <div class="col-sm-12">
-            <h1 id=titleSec1><b>About Me</b></h1>
+            <h1 class = titleSec1><b>About Me</b></h1>
         </div>
-    </div>
 
     <div class=iconsContainer>
         <div class=col-sm-4>
@@ -99,22 +113,22 @@
                 </ul>
         </div>
     </div>
+    </div>
     <script src = "https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <div class = container-fluid>
+    <div class = container-fluid id = connect>
         <div class = col-xs-6 id = left>
-            <h1>&#60Connect With Me&#62</h1>
+            <h1 id = 3>&#60Connect With Me&#62</h1>
         </div>
         <div class = col-xs-6 id = particles-js>
             <div class = sm>
-                <a href = https://www.facebook.com/gautam.gupta.58511 target="_blank"><img src = "../Images/facebook.png"></a>
-                <a href = https://www.instagram.com/gautam7097/ target="_blank"><img src = "../Images/insta.png"></a>
-                <a href = https://www.linkedin.com/in/ggupta24/ target="_blank"><img src = "../Images/linkedin.jpg"></a>
-                <a href = https://github.com/G-Gautam target="_blank"><img src = "../Images/git.png"></a>
+                <a href = https://www.facebook.com/gautam.gupta.58511 target="_blank" id = a><img src = "../Images/facebook.png"></a>
+                <a href = https://www.instagram.com/gautam7097/ target="_blank" id = a><img src = "../Images/instagram.png"></a>
+                <a href = https://www.linkedin.com/in/ggupta24/ target="_blank" id = a><img src = "../Images/linkedin.jpg"></a>
+                <a href = https://github.com/G-Gautam target="_blank" id = a><img src = "../Images/git.png"></a>
             </div>
         </div>
     </div>
-
     
     <script>
         particlesJS.load('particles-js', 'particles.json', function(){

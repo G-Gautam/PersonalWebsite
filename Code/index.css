@@ -1,4 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
 
+.anchor{
+    height:.1vw;
+    margin-top: 52%;
+}
 body, html {
     height: 100%;
     margin: 0;
@@ -50,12 +57,12 @@ body{
 /*Heading*/
 
 
-.aboutMeContainer #titleSec1{
+.aboutMeContainer .titleSec1{
     font-family: 'Roboto', sans-serif;
     font-size: 6vw;
     color: rgb(0, 0, 0);
     text-align: center;
-    padding-top: 5em;   
+    padding-top: 1em;   
 }
 
 .iconsContainer .col-sm-4{
@@ -83,7 +90,7 @@ ul{
     }
 }
 
-.container-fluid{
+#connect{
     margin-top: 5vw;
     max-height: 60vw;
 }
@@ -111,7 +118,7 @@ ul{
 .container-fluid .sm{
     position: absolute;
 }
-.sm img{
+.sm #a{
     max-height: auto;
     max-width: 13vw;
     width: 100%;
@@ -120,9 +127,19 @@ ul{
     padding: 2vw;
     margin-top: 2vw;
     margin-left: 125%;
-
+}
+.sm img{
+    max-height: auto;
+    max-width: 13vw;
+    width: 100%;
+    height: auto;
 }
 
+#nav{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
 @media only screen and (max-width: 768px){
     .container-fluid .col-xs-6 h1{
         font-size: 7vw;
