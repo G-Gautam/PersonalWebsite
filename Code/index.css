@@ -4,7 +4,9 @@ html {
 
 .anchor{
     height:.1vw;
-    margin-top: 52%;
+}
+#a3{
+    position: absolute;    
 }
 body, html {
     height: 100%;
@@ -14,12 +16,14 @@ body, html {
 h1,h2,h3,h4,h5,h6,p{
     font-family: 'Oswald', sans-serif;
 }
-body{
+.landingPage{
     background-image: url("../Images/blank-business-composition-373076.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: whitesmoke;
-    
+    width:100%;
+    height: 75vw;
+    max-height: 100%;
 }
 .homeRow{
     padding-top:15%;
@@ -89,10 +93,25 @@ ul{
         font-size: 6vw;
     }
 }
-
+#projects{
+    margin-top: 5vw;
+    max-height: 60vw;
+    padding:0;
+}
+#projects #right{
+    margin-top: 5vw;
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+    height: 60vw;
+    padding-left:0
+}
+#projects #left{
+    background-color: white;
+}
 #connect{
     margin-top: 5vw;
     max-height: 60vw;
+    padding:0;
 }
 
 .container-fluid #left{
@@ -100,13 +119,13 @@ ul{
     background-color: rgb(36, 36, 36);
     text-align: center;
     height: 60vw;
-    border-style: dashed;
+    padding-left:0
 }
 
 .container-fluid .col-xs-6 h1{
     font-size: 5vw;
     color: greenyellow;
-    margin-top: 60%;
+    margin-top: 55%;
     margin-bottom: 50%;
     font-family: 'Oswald', sans-serif;
 }
@@ -140,8 +159,85 @@ ul{
     width: 100%;
     z-index: 9999;
 }
+
 @media only screen and (max-width: 768px){
     .container-fluid .col-xs-6 h1{
         font-size: 7vw;
     }
+}
+
+
+
+/*SlideShow */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.prev{
+    left: 2%;
+    border-radius: 3px 0 0 3px;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 3%;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 1vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 1vw;
+  padding: 1vw 1.5vw;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1vw;
+  padding: 1vw 1.5vw;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
