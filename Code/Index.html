@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
     <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -13,6 +14,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
 
     <title>Gautam Gupta - Interactive Resume</title>
     <meta charset="UTF-8">
@@ -21,24 +25,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse" id = nav>
-        <div class = container-fluid>
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">                    <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-            </button>
+    <nav class="navbar navbar-inverse" id=nav>
+        <div class=container-fluid>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#1">Home</a></li>
-                  <li><a href="#2">About</a></li>
-                  <li><a href="#3">Connect</a></li>
+                    <li class="active"><a href="#1">Home</a></li>
+                    <li><a href="#2">About</a></li>
+                    <li><a href="#a3">Projects</a></li>
+                    <li><a href="#4">Connect</a></li>
+                    <li id=resume><a href="Resume.pdf" target="blank">Resume</a></li>
                 </ul>
             </div>
         </div>
-   </nav>
-    <div class=landingPage id = 1>
+    </nav>
+    <div class=landingPage id=1>
         <div class=homeRow>
             <div class="col-sm-8">
                 <h1 id=name>GAUTAM GUPTA</h1>
@@ -54,86 +60,183 @@
             </div>
         </div>
     </div>
-<div class = anchor id = 2></div>
+    <div class=anchor id=2></div>
     <div class="aboutMeContainer">
         <div class="col-sm-12">
-            <h1 class = titleSec1><b>About Me</b></h1>
+            <h1 class=titleSec1><b>About Me</b></h1>
         </div>
 
-    <div class=iconsContainer>
-        <div class=col-sm-4>
-            <img id="pic" src="../Images/Western.png" alt="Western Logo">
-            <h1 id="education"><b>Bachelors in Software Engineering
-                <br> Currently year 3</b></h1>
-                <br><h3>Courses Completed: </h3>
-            <ul id="courses">
-                <li>Applied Mathematics</li>
-                <li>Software Design</li>
-                <li>Discrete Structures</li>
-                <li>Applied Probability and Statistics</li>
-                <li>Algorithms and Data Structures</li>
-                <li>Operating Systems</li>
-                <li>Web Technology</li>
-                <li>DBMS</li>
-                <li>Networking, Protocols, and Architecture</li>
-            </ul>
-        </div>
-        <div class=col-sm-4>
-            <img id="pic" src="../Images/LearningLogo.png" alt="Eager to Learn">
-            <h1 id="skills"><b>I Love to Learn
-                <br> and Grow!</b></h1>
-                <br><h3>My Skill Set:</h3>
-            </h1>
-            <ul id="skill">
-                <li>Java, C++, Python, HTML, CSS, JavaScript</li>
-                <li>Android Studio, Unity</li>
-                <li>Visual Studio(Code), Netbeans, PyCharm</li>
-                <li>Node.js, Angular, Ember</li>
-                <li>Git</li>
-                <li>mySQL</li>
-                <li>SLDC Methodologies</li>
-                <li>Critical Thinking, Problem Solving</li>
-                <li>Strong Oral and Written Communication</li>
-            </ul>
-        </div>
-        <div class=col-sm-4>
-            <img id="pic" src="../Images/Hobbies.png" alt="Hobbies">
-            <h1 id="hobbies"><b>Beyond My <br> Academics</b></h1>
-            <br><h3>How I Spend My Free Time:</h3>
-            <ul id="hobbyList">
-                    <li>Competitive badminton - VP at UWO Badminton</li>
+        <div class=iconsContainer>
+            <div class=col-sm-4>
+                <img id="pic" src="../Images/Western.png" alt="Western Logo">
+                <h1 id="education"><b>Bachelors in Software Engineering
+                        <br> Currently year 3</b></h1>
+                <br>
+                <h3>Courses Completed: </h3>
+                <ul id="courses">
+                    <li>Applied Mathematics</li>
+                    <li>Software Design</li>
+                    <li>Discrete Structures</li>
+                    <li>Applied Probability and Statistics</li>
+                    <li>Algorithms and Data Structures</li>
+                    <li>Operating Systems</li>
+                    <li>Web Technology</li>
+                    <li>DBMS</li>
+                    <li>Networking, Protocols, and Architecture</li>
+                </ul>
+            </div>
+            <div class=col-sm-4>
+                <img id="pic" src="../Images/LearningLogo.png" alt="Eager to Learn">
+                <h1 id="skills"><b>I Love to Learn
+                        <br> and Grow!</b></h1>
+                <br>
+                <h3>My Skill Set:</h3>
+                </h1>
+                <ul id="skill">
+                    <li>Java, C++, Python, HTML, CSS, JavaScript</li>
+                    <li>Android Studio, Unity</li>
+                    <li>Visual Studio(Code), Netbeans, PyCharm</li>
+                    <li>Node.js, Angular, Ember</li>
+                    <li>Git</li>
+                    <li>mySQL</li>
+                    <li>SLDC Methodologies</li>
+                    <li>Critical Thinking, Problem Solving</li>
+                    <li>Strong Oral and Written Communication</li>
+                </ul>
+            </div>
+            <div class=col-sm-4>
+                <img id="pic" src="../Images/Hobbies.png" alt="Hobbies">
+                <h1 id="hobbies"><b>Beyond My <br> Academics</b></h1>
+                <br>
+                <h3>How I Spend My Free Time:</h3>
+                <ul id="hobbyList">
+                    <li>Competitive badminton</li>
                     <li>Playing chess - rated 1700 </li>
                     <li>Teaching myself piano</li>
-                    <li>An executive at UWO Heart & Stroke</li>
-                    <li>Participaing in hackathons</li>
-                    <li>Watching anime</li>
+                    <li>Contributing to the UWO Heart & Stroke</li>
+                    <li>Adding to my bucket list</li>
+                    <li>Completing LeetCode challenges</li>
                     <li>Managing a stock portfolio</li>
                     <li>Reading current events</li>
                     <li>Working on side projects</li>
                 </ul>
-        </div>
-    </div>
-    </div>
-    <script src = "https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-    <div class = container-fluid id = connect>
-        <div class = col-xs-6 id = left>
-            <h1 id = 3>&#60Connect With Me&#62</h1>
-        </div>
-        <div class = col-xs-6 id = particles-js>
-            <div class = sm>
-                <a href = https://www.facebook.com/gautam.gupta.58511 target="_blank" id = a><img src = "../Images/facebook.png"></a>
-                <a href = https://www.instagram.com/gautam7097/ target="_blank" id = a><img src = "../Images/instagram.png"></a>
-                <a href = https://www.linkedin.com/in/ggupta24/ target="_blank" id = a><img src = "../Images/linkedin.jpg"></a>
-                <a href = https://github.com/G-Gautam target="_blank" id = a><img src = "../Images/git.png"></a>
             </div>
         </div>
     </div>
-    
-    <script>
-        particlesJS.load('particles-js', 'particles.json', function(){
-            console.log('Loaded');
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <div class=container-fluid id=projects>
+        <div class=col-xs-6 id=left>
+            <div class=anchor id=a3></div>
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="Images/Pathways (2).jpg" style="width:100%">
+                    <div class="text"><a href=https://github.com/G-Gautam/PathwaysDBMS target=blank>
+                            Database Management System with Java FX and mySql</a></div>
+                    <div class="description">
+                        <p id=d>
+                            <h4><b>Project Description</b></h4>
+                            The Pathways 2 Excellence DBMS was my first exposure to working with
+                            <b>mySQL</b> coupled with <b>JavaFx</b>.<br>
+                            The program provides a way for a local tutoring center to keep a record of:
+                            <br> Student Details <br>
+                            Payment Histories <br>
+                            Revenue and Expenses <br>
+                            Employees <br>
+                            Class Schedule on a Weekly Basis <br>
+                            Furthermore, I integrated the <b>JMaps</b> library which uses Google Maps <br>
+                            to provide a geograpical breakdown of existing clients. <br> This information
+                            can be used to market strategically and efficiently.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="Images/Rand.jpg" style="width:100%">
+                    <div class="text"><a href=https://github.com/G-Gautam/RandomData target=blank>
+                            Python Script to Generate .CSV File with Random Data</a></div>
+                    <div class="description">
+                        <p id=d>
+                            <h4><b>Project Description</b></h4>
+                            The Pathways 2 Excellence DBMS was my first exposure to working with
+                            <b>mySQL</b> coupled with <b>JavaFx</b>.<br>
+                            The program provides a way for a local tutoring center to keep a record of:
+                            <br> Student Details <br>
+                            Payment Histories <br>
+                            Revenue and Expenses <br>
+                            Employees <br>
+                            Class Schedule on a Weekly Basis <br>
+                            Furthermore, I integrated the <b>JMaps</b> library which uses Google Maps <br>
+                            to provide a geograpical breakdown of existing clients. <br> This information
+                            can be used to market strategically and efficiently.
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div class="mySlides">
+                    <div class="text"><a href=https://github.com/G-Gautam/Hack-OpSys target=blank>
+                            Real Time Multiplayer Android Game</a></div>
+                    <div class="numbertext">3 / 3</div>
+                    <img src="Images/Casino.JPG" style="width:100%">
+                    
+                    <div class="description">
+                        <p id=d>
+                            <h4><b>Project Description</b></h4>
+                            The Pathways 2 Excellence DBMS was my first exposure to working with
+                            <b>mySQL</b> coupled with <b>JavaFx</b>.<br>
+                            The program provides a way for a local tutoring center to keep a record of:
+                            <br> Student Details <br>
+                            Payment Histories <br>
+                            Revenue and Expenses <br>
+                            Employees <br>
+                            Class Schedule on a Weekly Basis <br>
+                            Furthermore, I integrated the <b>JMaps</b> library which uses Google Maps <br>
+                            to provide a geograpical breakdown of existing clients. <br> This information
+                            can be used to market strategically and efficiently.
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+        <div class=col-xs-6 id=right>
+            <h1>&#60Projects&#62</h1>
+        </div>
+    </div>
+
+    <div class=container-fluid id=connect>
+        <div class=col-xs-6 id=left>
+            <h1 id=4>&#60Connect With Me&#62</h1>
+        </div>
+        <div class=col-xs-6 id=particles-js>
+            <div class=sm>
+                <a href=https://www.facebook.com/gautam.gupta.58511 target="_blank" id=a><img src="Images/facebook.png"></a>
+                <a href=https://www.instagram.com/gautam7097/ target="_blank" id=a><img src="Images/instagram.png"></a>
+                <a href=https://www.linkedin.com/in/ggupta24/ target="_blank" id=a><img src="Images/linkedin.jpg"></a>
+                <a href=https://github.com/G-Gautam target="_blank" id=a><img src="Images/git.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src=Main.js></script>
 </body>
+
 </html>
