@@ -37,12 +37,15 @@ h1,h2,h3,h4,h5,h6,p{
 
 }
 
+.projects{
+    padding-top: 5vw;
+}
+
 .subTitle{
-    color: greenyellow;
+    color: black;
     font-size: 8vw;
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    margin: 2vw;
 }
 
 .titleRow #title{
@@ -51,18 +54,28 @@ h1,h2,h3,h4,h5,h6,p{
     font-family: 'Oswald', sans-serif;
     text-align: right;
 }
+
+.homeRow #profile{
+    max-width: 20vw;
+    height: auto;
+}
 @media only screen and (max-width: 768px){
     body{
         background-size: contain;
     }
-    .homeRow #profile{
-        display: none;
+    #profile{
+        width: 15vw;
+        height: auto;
     }
-    .homeRow #name{
-        text-align: right;
+    .homeRow{
+        position: static;
+        margin-top: 15vw;
+        z-index: 1;
     }
     .titleRow #title{
         text-align: right;
+        margin: 0;
+        padding: 0;
     }     
 }
 /* Start of section 1 items*/
@@ -102,7 +115,6 @@ ul{
     }
 }
 #connect{
-    margin-top: 5vw;
     max-height: 60vw;
     padding:0;
 }
@@ -167,26 +179,117 @@ html.sr .load-hidden {
   .widget-list {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     background: black;
     border-radius: 8px;
     flex-wrap: wrap;
-  }
-  
+    text-align: center;
+  }  
   .widget {
-    width: 15%;
-    height: 50px;
-    flex: auto;
-    margin: 0.5rem;
+    width: 30vw;;
+    height: 15vw;
+    margin: 0.5vw;
     background: white;
-    line-height: 50px;
     text-align: center;
     border-radius: 4px;
   }
+
+  .projectFrame{
+      width: 30vw;
+      height: 15vw;
+      overflow: hidden;
+      text-align: center;
+  }
+
+  #projectImage{
+      width: 100%;
+      height: auto;
+  }
+
+  @media only screen and (max-width: 768px){
+    .widget-list{
+        display: block;
+    }
+    .widget{
+        width: 80%;
+        margin-bottom: 2vw;
+        padding-top:2vw;
+    }
+
+}
+
   
   /* extension */
   html.sr .widget {
     visibility: hidden;
   }
   
+  #projectImage:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 60vw;
+  width: 30vw;
+  height: auto;
+  
+}
+
+/* Caption of Modal Image */
+#caption, #titlemodal {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: auto;
+}
+
+#titlemodal{
+    color: greenyellow;
+}
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.lol {
+  position: absolute;
+
+  margin-left: 65vw;
+    width: 3vw;
+  color: white;
+  font-size: 2vw;
+  background-color: rgba(0,0,0,0);
+  opacity: 1;
+  z-index: 90;
+}

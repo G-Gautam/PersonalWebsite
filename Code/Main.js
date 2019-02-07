@@ -1,4 +1,4 @@
-particlesJS.load('particles-js', 'particles.json', function(){
+particlesJS.load('particles-js', 'particles.json', function () {
   console.log('Loaded');
 });
 ScrollReveal({ reset: true });
@@ -33,9 +33,75 @@ ScrollReveal({ reset: true });
 
 
 
-  ScrollReveal().reveal('.projects', { duration: 2000 });
-  ScrollReveal().reveal('.widget', { interval: 200 });
+ScrollReveal().reveal('.projects', { duration: 2000 });
+ScrollReveal().reveal('.widget', { interval: 200 });
 
-  ScrollReveal().reveal('.widget-list', { duration: 5000 });
+ScrollReveal().reveal('.widget-list', { duration: 5000 });
 
+var modal = document.getElementById('myModal');
 
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName('projectImage');
+
+img[0].onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var titleText = document.getElementById("titlemodal");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = "caption";
+  titleText.innerHTML = "title";
+}
+img[1].onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var titleText = document.getElementById("titlemodal");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = "caption";
+  titleText.innerHTML = "title";
+}
+img[2].onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var titleText = document.getElementById("titlemodal");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = "caption";
+  titleText.innerHTML = "title";
+}
+img[3].onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var titleText = document.getElementById("titlemodal");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = "caption";
+  titleText.innerHTML = "title";
+}
+img[4].onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var titleText = document.getElementById("titlemodal");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = "caption";
+  titleText.innerHTML = "title";
+}
+img[5].onclick = function () {
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  var titleText = document.getElementById("titlemodal");
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = "caption";
+  titleText.innerHTML = "title";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("lol")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+}
