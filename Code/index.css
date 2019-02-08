@@ -2,6 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
+#pro{
+    height: 1vh;
+    display: hidden;
+    z-index: 2;
+    margin-top: 100vh;
+}
 .anchor{
     height:.1vw;
 }
@@ -249,7 +255,7 @@ html.sr .load-hidden {
 }
 
 /* Caption of Modal Image */
-#caption, #titlemodal {
+#caption, #titlemodal, #button {
   margin: auto;
   display: block;
   width: 80%;
@@ -292,4 +298,14 @@ html.sr .load-hidden {
   background-color: rgba(0,0,0,0);
   opacity: 1;
   z-index: 90;
+}
+
+#button{
+    color: black;
+    font-weight: bold;
+    background-color: greenyellow
+}
+#titlemodal{
+    font-size: 3vw;
+    font-family: "Oswald", sans-serif;
 }
